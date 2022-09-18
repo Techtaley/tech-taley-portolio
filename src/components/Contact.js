@@ -1,64 +1,30 @@
 import React, { useState } from 'react'
-import emailjs from 'emailjs-com'
+//import emailjs from 'emailjs-com'
 
 //import axios from 'axios'
-//import {Redirect } from 'react-router-dom'
+import {Redirect } from 'react-router-dom'
 
 export default function Contact(){
-    // const [ name, getName ] = useState('')    
-    // const [ email, getEmail ] = useState('')    
-    // const [ message, getMessage ] = useState('')
+    const [ name, getName ] = useState('')    
+    const [ email, getEmail ] = useState('')    
+    const [ message, getMessage ] = useState('')
 	const [ confirm, setConfirm ] = useState(false)
 
-    //const [ redirect, setRedirect ] = useState(false)     
-
-    // //when user clicks(event) submit button(target) hangleSubmit triggered
-    // //handleSubmit takes values from state and stores inside a const payload
-    //const sendEmail = async (e) => {
+    const [ redirect, setRedirect ] = useState(false)     
 
 	function sendEmail(e) {
         e.preventDefault()
 		setConfirm(true)
-		//resetState() 
-
-		//axios sends payload to database from state
-        // axios.post('http://localhost:4000/api/sendemail', {			
-        //     	name,
-        //     	email,
-		// 		message
-        // }, {withCredentials: true})		
-		// emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-		// .then(res => {
-        //     //console.log(res)
-        //     resetState() 
-        // })
-		// .catch(err => {
-        //     console.log(err)
-        // })
-
-		emailjs.sendForm('service_m8pxu8e', 'template_fhstbmg', e.target, 'user_GFWpzMCefGHbxm5kltU5n')
-		.then(result => {
-			console.log(result.text);
-			//resetState() 
-		})
-		.catch(error => {
-			console.log(error.text);
-		})
-		
+				
 		e.target.reset()
 
-    //    //setRedirect(true)
+    	setRedirect(true)
 
-        //then returns state back to empty string if adding more or use windows.location = '/' to go homepage
-        // const resetState = () => {
-        //      this.setState({
-		// 		name: '',
-		// 		email: '',
-		// 		message: ''
-        //      }) 
-    	// }	
+		getName('')
+		getEmail('')
+		getMessage('')
  
-   // if(redirect) return <Redirect to="/" />   
+   		if(redirect) return <Redirect to="/" />   
 	}
 	
 	return (
@@ -73,10 +39,10 @@ export default function Contact(){
 						name="name"
 						placeholder="Name"
 						maxlength="30"
-						// onChange={e => {
-						// 	getName(e.target.value)
-						// }}                        
-						// value={name}
+						onChange={e => {
+							getName(e.target.value)
+						}}                        
+						value={name}
 					/>
 											
 					<input className="contact_input"
@@ -84,22 +50,21 @@ export default function Contact(){
 						name="email"
 						placeholder="Email address"
 						maxlength="40"
-						// onChange={e => {
-						// 	getEmail(e.target.value)
-						// }}                        
-						// value={email}
+						onChange={e => {
+							getEmail(e.target.value)
+						}}                        
+						value={email}
 					/>	
 					<textarea className="contact_input"
 						type="text"
 						name="message"
 						placeholder="Message"
 						maxlength="40"
-						// onChange={e => {
-						// 	getMessage(e.target.value)
-						// }}                        
-						// value={message}
+						onChange={e => {
+							getMessage(e.target.value)
+						}}                        
+						value={message}
 					/>
-
 
 					<input
 						className='contact_btn'
