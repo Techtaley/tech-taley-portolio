@@ -27,6 +27,16 @@ export default function SkillsBar() {
             </div>
 
             <div className="skills_button_section">
+                <h2>State Management</h2>
+                <div className="skills_span">                    
+                    <span className="mongo">Redux</span>
+                    <span className="express">ContextAPI</span> 
+                    <span className="react">Redux Persist</span>                                    
+                    <span className="node">Ref</span>
+                </div>    
+            </div>            
+
+            <div className="skills_button_section">
                 <h2>Deployment</h2>
                 <div className="skills_span">                
                     <span className="github">gitHub</span>
@@ -37,17 +47,16 @@ export default function SkillsBar() {
             </div>
 
             <div className="skills_button_section">
-            <h2>API</h2>
+            <h2>API Services | Data Storage</h2>
             <div className="skills_span">                
-                <span className="html">MongoDB</span>
-                <span className="html">ExpressJS</span> 
-                <span className="html">ReactJS</span>                                    
-                <span className="html">NodeJS</span>
+                <span className="html">Firebase</span>
+                <span className="html">MongoDB</span> 
+                <span className="html">GraphQL</span> 
             </div>    
             </div>
 
             <div className="skills_button_section">
-            <h2>Testing & CI/CD</h2>
+            <h2>Testing | CI/CD</h2>
             <div className="skills_span">                
                 <span className="github">gitHub</span>
                 <span className="jest">Jest</span>
