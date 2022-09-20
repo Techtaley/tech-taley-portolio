@@ -9,7 +9,7 @@ export default function Banner({ image, alt, title, role, desc, link }){
 			showCursor: true,
 			backDelay: 1500,
 			backSpeed: 60,
-			strings: ["ReactJS, NodeJS", "MongoDB, ExpressJS", "React Hooks, Material-UI", "Web Services, API Calls", "HTML5, CSS3, ES6", "GitHub, CD/CI", "TypeScript, Docker"],
+			strings: ["ReactJS, NodeJS, MongoDB, ExpressJS", "Redux, Persist Data, State Management", "HTML5, CSS3, ES6", "Web Services, API Calls, GraphQL", "GitHub, Jenkins, CD/CI", "TypeScript, Jest, Docker"],
 		})	
 	}, [])
 
